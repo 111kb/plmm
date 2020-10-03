@@ -1,0 +1,10 @@
+FROM alpine
+
+ENV PORT    1777
+
+ADD soo /soo
+ADD start.sh /start.sh
+ADD base.txt /base.txt
+RUN chmod 700 /soo
+RUN chmod +x /start.sh
+CMD /start.sh
